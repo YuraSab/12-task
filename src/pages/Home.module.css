@@ -1,0 +1,12 @@
+.isLoading{
+    height: 848px;
+    /*height: 100%;*/
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+}

@@ -1,0 +1,9 @@
+.filmItem{
+    /*width: 30%;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}

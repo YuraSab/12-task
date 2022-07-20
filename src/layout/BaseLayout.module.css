@@ -1,0 +1,39 @@
+.main-wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+main {
+    /* займи вільне місце - у відношені до інших елементів*/
+    /* main - steal all space, header and footer - min-space for each */
+    flex: 1;
+    padding:  20px;
+    overflow-y: auto;
+
+
+    position: relative;
+}
+
+header,footer{
+    padding: 10px 20px;
+}
+
+header{
+    background: lightgray;
+}
+
+footer{
+    background: lightgray;
+
+}
+
+
+
+/*.item{*/
+/*    height: 400px;*/
+/*    width: 400px;*/
+/*    background: blue;*/
+/*}*/
