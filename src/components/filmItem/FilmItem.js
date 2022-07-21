@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./FilmItem.module.css";
 
-export const FilmItem = ({item}) => {
+export const FilmItem = ({item,
+                             // onFilmClick
+}) => {
 
     // adult: false
     // backdrop_path: "/393mh1AJ0GYWVD7Hsq5KkFaTAoT.jpg"
@@ -19,10 +21,14 @@ export const FilmItem = ({item}) => {
     // vote_count: 1680
 
 
-    const {original_title, overview, release_date, vote_count, vote_average, poster_path, movieGenresList} = item;
+    const {original_title, overview, release_date, vote_count, vote_average, poster_path, movieGenresList, onClicks} = item;
 
     return (
-        <div className={styles.filmItem}>
+        <div
+            className={styles.filmItem}
+            // onClick={onFilmClick(item)}
+
+        >
             <div>
                 <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={`${original_title}`}/>
             </div>

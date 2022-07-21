@@ -14,26 +14,23 @@ function App() {
         <div>
             <BaseLayout>
                 <Switch>
-                    <Route path={"/"} exact>
+                    <Route path={"/"} >
                         <Home/>
                     </Route>
 
-                    <Route path="/movie/:id" render={(index) => {
-                        return(
-                            <MovieDetails key ={index}/>
-                        )
-                    }}/>
-
-                    {/*</Route>*/}
-
-                    {/*<Redirect to={"/"}/>*/}
-
-                    <Route>
-                        <h1>Page not found
-                            <button onClick={() => history.push("/")}>
-                                go home
-                            </button></h1>
+                    <Route path="/movie/:id">
+                            <MovieDetails/>
                     </Route>
+
+
+                    <Redirect to={"/"}/>
+
+                    {/*<Route>*/}
+                    {/*    <h1>Page not found*/}
+                    {/*        <button onClick={() => history.push("/")}>*/}
+                    {/*            go home*/}
+                    {/*        </button></h1>*/}
+                    {/*</Route>*/}
                 </Switch>
             </BaseLayout>
         </div>

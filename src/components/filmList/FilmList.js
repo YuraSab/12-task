@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback} from "react";
 import {FilmItem} from "../filmItem";
 import styles from "./FilmList.module.css";
 
@@ -11,11 +11,12 @@ export const FilmList = ({items, onFilmClick}) => {
             {
                 items.map((value) => (
                         <div
+                            onClick={() => onFilmClick(value)}
                             key={value.id}
-                            onClick={onFilmClick(value)}
                             className={styles.itemWrapper}>
                             <FilmItem
 
+                                // onFilmClick={onFilmClick}
                                 item={value}
                             />
                         </div>
