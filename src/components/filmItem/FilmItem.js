@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FilmItem.module.css";
+
 export const FilmItem = ({item}) => {
 
     // adult: false
@@ -18,7 +19,7 @@ export const FilmItem = ({item}) => {
     // vote_count: 1680
 
 
-    const {original_title, overview, release_date, vote_count, vote_average, poster_path} = item;
+    const {original_title, overview, release_date, vote_count, vote_average, poster_path, movieGenresList} = item;
 
     return (
         <div className={styles.filmItem}>
@@ -27,6 +28,13 @@ export const FilmItem = ({item}) => {
             </div>
             <div>
                 <h2>{original_title}</h2>
+                <h2>
+                    {movieGenresList.map(({name, id}, i) =>(
+                        <span key={id}>
+                            {name}{i < movieGenresList.length - 1 && " - "}
+                        </span>
+                    ))}
+                </h2>
                 <span>Rating: {vote_average} (total votes: {vote_count})</span>
                 <p>{overview}</p>
                 <span>Realise date: {release_date}</span>

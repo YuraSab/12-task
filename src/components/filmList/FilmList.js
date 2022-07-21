@@ -2,7 +2,7 @@ import React from "react";
 import {FilmItem} from "../filmItem";
 import styles from "./FilmList.module.css";
 
-export const FilmList = ({items}) => {
+export const FilmList = ({items, onFilmClick}) => {
 
     console.log(items, "from FilmList")
 
@@ -10,7 +10,10 @@ export const FilmList = ({items}) => {
         <div className={styles.listWrapper}>
             {
                 items.map((value) => (
-                        <div className={styles.itemWrapper} key={value.id}>
+                        <div
+                            key={value.id}
+                            onClick={onFilmClick(value)}
+                            className={styles.itemWrapper}>
                             <FilmItem
 
                                 item={value}
